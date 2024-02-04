@@ -1,4 +1,4 @@
-# ComfyUI on VM
+# ComfyUI on Cloud
 
 The main goal of this repository is to provide a quick and easy method for individuals interested in stable diffusion to set up their own comfyUI server application with GPU support. This application can be accessed from any device capable of running a browser, including ARM-based Macs, iPads, and even smartphones, without concerns about performance, speed, or privacy issues.
 
