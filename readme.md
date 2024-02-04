@@ -10,9 +10,7 @@ Normally, a full month's usage of a T4 GPU with 4 VCPU cores, 16 GB RAM, and 100
 
 | Avg Usage  | SSD   | RAM  | Number of VCPU Cores | Monthly Cost (Estimation) |
 |------------|-------|------|----------------------|---------------------------|
-| 3h per day | 75GB  | 16GB | 6                    | 29$                       |
 | 3h per day | 100GB | 16GB | 6                    | 35$                       |
-| 6h per day | 75GB  | 16GB | 6                    | 47$                       |
 | 6h per day | 100GB | 16GB | 6                    | 52$                       |
 
 

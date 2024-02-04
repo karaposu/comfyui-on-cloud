@@ -23,6 +23,8 @@ sudo cp /var/cuda-repo-ubuntu2004-11-8-local/cuda-*-keyring.gpg /usr/share/keyri
 sudo apt-get update
 sudo apt-get -y install cuda
 
+source .bashrc
+source .bashrc
 pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu118
 echo -e "import torch\nprint(torch.cuda.is_available())\nprint(torch.cuda.get_device_name(0))" > test_cuda.py
 python test_cuda.py
