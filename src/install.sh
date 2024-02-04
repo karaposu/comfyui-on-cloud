@@ -19,7 +19,7 @@ COMFYUI_RUNNER_PATH="${comfy_ui_dir}/main.py"
 COMFYUI_PATH=$comfy_ui_dir
 
 
-cp ComfyUI-on-VM/src/install_comfyui.sh .
+cp comfyui-on-cloud/src/install_comfyui.sh .
 
 chmod +x install_comfyui.sh
 ./install_comfyui.sh
@@ -28,8 +28,8 @@ echo " "
 echo " ---------------- comfyui installed "
 echo " "
 
-cp ComfyUI-on-VM/src/install_extensions.sh ComfyUI
-cp ComfyUI-on-VM/src/install_checkpoints.sh ComfyUI
+cp comfyui-on-cloud/src/install_extensions.sh ComfyUI
+cp comfyui-on-cloud/src/install_checkpoints.sh ComfyUI
 
 echo " "
 echo " ---------------- automation scripts copied to comfyui directory "
