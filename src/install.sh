@@ -39,12 +39,12 @@ cd ComfyUI
 
 chmod +x install_extensions.sh
 chmod +x install_checkpoints.sh
-#./install_extensions.sh
+./install_extensions.sh
 
 echo " "
 echo " ---------------- extensions installed "
 echo " "
-#./install_checkpoints.sh
+./install_checkpoints.sh
 
 echo " "
 echo " ---------------- checkpoints installed "
