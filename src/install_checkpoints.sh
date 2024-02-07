@@ -1,5 +1,8 @@
 #!/bin/bash
 
+mkdir -p ./models/clip/
+mkdir -p ./models/ipadapter/
+
 #sd_xl and refiner
 wget -c https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors -P ./models/checkpoints/
 wget -c https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors -P ./models/checkpoints/
@@ -38,10 +41,10 @@ wget https://civitai.com/api/download/models/251662 --content-disposition -P ./m
 wget ttps://civitai.com/api/download/models/253055 --content-disposition -P ./models/checkpoints/
 
 # ipadapters
-wget https://huggingface.co/h94/IP-Adapter/blob/main/models/ip-adapter-plus_sd15.safetensors -P ./models/checkpoints/
-wget https://huggingface.co/h94/IP-Adapter/blob/main/models/ip-adapter-plus-face_sd15.safetensors -P ./models/checkpoints/
-wget https://huggingface.co/h94/IP-Adapter/blob/main/models/ip-adapter_sd15.safetensors -P ./models/checkpoints/
-wget https://huggingface.co/h94/IP-Adapter/blob/main/models/ip-adapter-full-face_sd15.safetensors -P ./models/checkpoints/
+wget https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus_sd15.safetensors -P ./models/ipadapter/
+wget https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus-face_sd15.safetensors -P ./models/ipadapter/
+wget https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter_sd15.safetensors -P ./models/ipadapter/
+wget https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-full-face_sd15.safetensors -P ./models/ipadapter/
 
 
 #controlnets
@@ -67,4 +70,11 @@ wget https://huggingface.co/stabilityai/control-lora/resolve/main/control-LoRAs-
 wget https://huggingface.co/stabilityai/control-lora/resolve/main/control-LoRAs-rank256/control-lora-depth-rank256.safetensors -P ./models/controlnet/
 wget https://huggingface.co/stabilityai/control-lora/resolve/main/control-LoRAs-rank256/control-lora-recolor-rank256.safetensors -P ./models/controlnet/
 wget https://huggingface.co/stabilityai/control-lora/resolve/main/control-LoRAs-rank256/control-lora-sketch-rank256.safetensors -P ./models/controlnet/
+
+ # clip vision
+
+ wget https://huggingface.co/comfyanonymous/clip_vision_g/resolve/main/clip_vision_g.safetensors -P ./models/clip/
+# wget https://huggingface.co/laion/CLIP-ViT-H-14-laion2B-s32B-b79K/resolve/main/model.safetensors -P ./models/clip/
+wget -O ./models/clip/CLIP-ViT-H-14.safetensors https://huggingface.co/laion/CLIP-ViT-H-14-laion2B-s32B-b79K/resolve/main/model.safetensors
+
 

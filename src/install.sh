@@ -1,7 +1,10 @@
 #!/bin/bash
 
+
+
 USER_NAME=$(whoami)
 USER_HOME=$(eval echo ~$USER_NAME)
+
 
 echo "Current directory: $(pwd)"
 script_dir=$(dirname "$(realpath "$0")")

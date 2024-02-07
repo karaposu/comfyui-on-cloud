@@ -6,7 +6,7 @@ The main goal of this repository is to provide a quick and easy method for indiv
 
 ## Cost Efficiency
 
-Normally, a full month's usage of a T4 GPU with 4 VCPU cores, 16 GB RAM, and 100GB SSD amounts to approximately 150 dollars on Google Cloud Platform (GCP). However, by automating the VM's shutdown and startup processes and assuming an average usage of 3 hours per day, the cost is reduced to around 30 dollars per month.
+Normally, a full month's usage of a T4 GPU with 6 VCPU cores, 16 GB RAM, and 100GB SSD amounts to approximately 150 dollars on Google Cloud Platform (GCP). However, by automating the VM's shutdown and startup processes and assuming an average usage of 3 hours per day, the cost is reduced to around 35 dollars per month.
 
 | Avg Usage  | SSD   | RAM  | Number of VCPU Cores | Monthly Cost (Estimation) |
 |------------|-------|------|----------------------|---------------------------|
@@ -26,6 +26,7 @@ Normally, a full month's usage of a T4 GPU with 4 VCPU cores, 16 GB RAM, and 100
     git clone https://github.com/karaposu/comfyui-on-cloud
     chmod +x ./comfyui-on-cloud/src/install.sh
     chmod +x ./comfyui-on-cloud/src/virgin_vm.sh
+    source ~/.bashrc
     ./comfyui-on-cloud/src/virgin_vm.sh # run this only for new VM. This will install miniconda, cuda 11.8, torch.   
     ./comfyui-on-cloud/src/install.sh
     ```
