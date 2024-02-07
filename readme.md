@@ -1,5 +1,9 @@
 # ComfyUI on Cloud
 
+
+
+[![Tutorial](https://img.youtube.com/vi/PZwnbBaJH3I/0.jpg)](https://www.youtube.com/watch?v=PZwnbBaJH3I)
+
 The main goal of this repository is to provide a quick and easy method for individuals interested in stable diffusion to set up their own comfyUI server application with GPU support. This application can be accessed from any device capable of running a browser, including ARM-based Macs, iPads, and even smartphones, without concerns about performance, speed, or privacy issues.
 
 > **NOTE:** As we use the spot VM feature to minimize costs, there may be times when GCP refuses to start the VM instance. To prevent this, it's possible to switch from a spot VM to a standard VM, but be aware that this will result in an approximate 60% increase in total costs.

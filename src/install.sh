@@ -1,7 +1,5 @@
 #!/bin/bash
 
-
-
 USER_NAME=$(whoami)
 USER_HOME=$(eval echo ~$USER_NAME)
 
