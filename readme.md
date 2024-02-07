@@ -151,5 +151,15 @@ cd to ComfyUI directory and run
     python test_cuda.py
 ```
 
+### if you want to stop starting at reboot feature :
+```bash
+
+sudo systemctl disable comfyui.service
+```
+
+### if you want to stop the service for that moment :
+```bash
+sudo systemctl stop comfyui.service
+```
 
 
