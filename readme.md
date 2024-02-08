@@ -131,7 +131,7 @@ Feel free to inspect all files or ask for clarification to ensure safety and sug
     ```
 
     This process will automatically install a startup runner for the server and start the server. You can verify the installation by accessing `[external-ip-of-your-vm]:8188` in your browser to check if everything is working correctly.
-  
+
 
  
 ##  TroubleShooting 
@@ -166,4 +166,12 @@ sudo systemctl disable comfyui.service
 sudo systemctl stop comfyui.service
 ```
 
+
+##  How can I get my images  
+### Upload them to your local
+1. Find out the full path of your ComfyUI output folder. Mine is `/home/ns/ComfyUI/output`.
+2. Create a new folder in your local machine and cd into that directory through terminal
+3. run this command (change "ns" with your username inside comfyvm and also change the output directory path accordingly  )
+```gcloud compute scp --recurse ns@comfyvm:/home/ns/ComfyUI/output ./``` 
+This will download the images into your local. 
 
