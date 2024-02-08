@@ -1,7 +1,6 @@
 # ComfyUI on Cloud
 
 
-
 [![Tutorial](https://img.youtube.com/vi/PZwnbBaJH3I/0.jpg)](https://www.youtube.com/watch?v=PZwnbBaJH3I)
 
 The main goal of this repository is to provide a quick and easy method for individuals interested in stable diffusion to set up their own comfyUI server application with GPU support. This application can be accessed from any device capable of running a browser, including ARM-based Macs, iPads, and even smartphones, without concerns about performance, speed, or privacy issues.
@@ -57,7 +56,7 @@ Normally, a full month's usage of a T4 GPU with 6 VCPU cores, 16 GB RAM, and 100
 ---
 ##  How can I get my images  
 ### Get them through ComfyUI 
-You can right click on generated image and click "save image". this will download it to your local
+You can right click on generated image and click "save image". This will download it to your local
 if you wanna download past generated images you can click view history and load past image and then do "save image"
 ### Bulk download them to your local with gcloud scp
 1. Find out the full path of your ComfyUI output folder. Mine is `/home/ns/ComfyUI/output`.
@@ -148,20 +147,21 @@ Feel free to inspect all files or ask for clarification to ensure safety and sug
  
 ##  TroubleShooting 
 ### If Installation finished but server doesnt start
-1. Login to the VM using  "gcloud compute ssh comfyvm" if you cant login run 
-"gcloud compute instances stop comfyvm" and wait couple of minutes. And then run 
-"gcloud compute instances start comfyvm" and login again. 
-2. If there is no problem with loginingyour VM then run "systemctl stop comfyui.service"
-cd to ComfyUI directory and run 
-"python main.py --listen". Check the terminal output and make sure comfyui starts without problem. 
+1. Try to login to the VM using  ```gcloud compute ssh comfyvm```. If you cant login, run 
+```gcloud compute instances stop comfyvm``` and wait couple of minutes. And then run 
+```gcloud compute instances start comfyvm``` and again wait couple of minutes. ANd then try to login again. 
 
-3. If there are no problems then the problem is about firewall permissions. Go and check firewall rule for port8188 and make sure down below you see comfyvm. If not then you must edit comfyvm and add port8188 tag in network settings section
+2. If there is no problem with logining your VM, then run ```systemctl stop comfyui.service``` to stop comfyui.service
+.After this ```cd``` to ComfyUI directory and run 
+```python main.py --listen```. Check the terminal output and make sure comfyui starts without problem. 
+
+3. If there are no problems when running the comfyui manually then the problem is about firewall permissions. Go and check firewall rule for port8188 and make sure in this firewall rule setting page you see comfyvm. If not then you must edit comfyvm and add port8188 tag in network settings section. 
 
 
 ### if comfyvm throws error when running through "python main.py --listen"
 1. Make sure conda is activated. 
-2. make sure GPU is attached by running "nvidia-smi"
-3. make sure Torch sees the GPU by running these lines
+2. Make sure GPU is attached by running "nvidia-smi"
+3. Make sure Torch sees the GPU by running these lines
 ```bash
     echo -e "import torch\nprint(torch.cuda.is_available())\nprint(torch.cuda.get_device_name(0))" > test_cuda.py 
     python test_cuda.py
