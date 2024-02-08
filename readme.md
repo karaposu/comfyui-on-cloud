@@ -55,6 +55,18 @@ Normally, a full month's usage of a T4 GPU with 6 VCPU cores, 16 GB RAM, and 100
     gcloud compute instances stop comfyvm
     ```
 ---
+##  How can I get my images  
+### Get them through ComfyUI 
+You can right click on generated image and click "save image". this will download it to your local
+if you wanna download past generated images you can click view history and load past image and then do "save image"
+### Bulk download them to your local with gcloud scp
+1. Find out the full path of your ComfyUI output folder. Mine is `/home/ns/ComfyUI/output`.
+2. Create a new folder in your local machine and cd into that directory through terminal
+3. run this command (change "ns" with your username inside comfyvm and also change the output directory path accordingly  )
+```gcloud compute scp --recurse ns@comfyvm:/home/ns/ComfyUI/output ./``` 
+This will download the images into your local. 
+
+
 
 ## Explanation of Files for manual usage and debugging
 
@@ -166,12 +178,4 @@ sudo systemctl disable comfyui.service
 sudo systemctl stop comfyui.service
 ```
 
-
-##  How can I get my images  
-### Upload them to your local
-1. Find out the full path of your ComfyUI output folder. Mine is `/home/ns/ComfyUI/output`.
-2. Create a new folder in your local machine and cd into that directory through terminal
-3. run this command (change "ns" with your username inside comfyvm and also change the output directory path accordingly  )
-```gcloud compute scp --recurse ns@comfyvm:/home/ns/ComfyUI/output ./``` 
-This will download the images into your local. 
 
