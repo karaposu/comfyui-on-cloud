@@ -39,12 +39,16 @@ wget https://civitai.com/api/download/models/251662 --content-disposition -P ./m
 # perfectdeliberate
 wget https://civitai.com/api/download/models/253055 --content-disposition -P ./models/checkpoints/
 
+#epicrealism naturalSin
+wget https://huggingface.co/misri/epicrealism_naturalSin/resolve/main/epicrealism_naturalSin.safetensors -P ./models/checkpoints/
+
 # ipadapters
 wget https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus_sd15.safetensors -P ./models/ipadapter/
 wget https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus-face_sd15.safetensors -P ./models/ipadapter/
 wget https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter_sd15.safetensors -P ./models/ipadapter/
 wget https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-full-face_sd15.safetensors -P ./models/ipadapter/
 
+wget https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_encoder/model.safetensors -P ./models/clip/
 
 # ControlNets
 wget https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11e_sd15_ip2p_fp16.safetensors -P ./models/controlnet/
@@ -80,3 +84,25 @@ wget https://huggingface.co/comfyanonymous/clip_vision_g/resolve/main/clip_visio
 wget -O ./models/clip/CLIP-ViT-H-14.safetensors https://huggingface.co/laion/CLIP-ViT-H-14-laion2B-s32B-b79K/resolve/main/model.safetensors
 
 
+# segment anything
+## GroundingDINO_SwinT_OGC
+wget https://huggingface.co/ShilongLiu/GroundingDINO/resolve/main/GroundingDINO_SwinT_OGC.cfg.py -P ./models/grounding-dino/
+wget https://huggingface.co/ShilongLiu/GroundingDINO/resolve/main/groundingdino_swint_ogc.pth  -P ./models/grounding-dino/
+##GroundingDINO_SwinB
+wget https://huggingface.co/ShilongLiu/GroundingDINO/resolve/main/GroundingDINO_SwinB.cfg.py -P ./models/grounding-dino/
+wget https://huggingface.co/ShilongLiu/GroundingDINO/resolve/main/groundingdino_swinb_cogcoor.pth -P ./models/grounding-dino/
+#
+###sam_vit_h
+#wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth -P ./models/sams/
+####sam_vit_l
+#wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth -P ./models/sams/
+####  sam_vit_b
+#wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth -P ./models/sams/
+#### sam_hq_vit_h
+#wget https://huggingface.co/lkeab/hq-sam/resolve/main/sam_hq_vit_h.pth -P ./models/sams/
+#### sam_hq_vit_l
+#wget https://huggingface.co/lkeab/hq-sam/resolve/main/sam_hq_vit_l.pth -P ./models/sams/
+####sam_hq_vit_b
+#wget https://huggingface.co/lkeab/hq-sam/resolve/main/sam_hq_vit_b.pth -P ./models/sams/
+####mobile_sam
+#wget https://github.com/ChaoningZhang/MobileSAM/blob/master/weights/mobile_sam.pt -P ./models/sams/
