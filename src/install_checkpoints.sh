@@ -37,7 +37,7 @@ wget https://huggingface.co/autismanon/modeldump/resolve/main/dreamshaper_8.safe
 wget https://civitai.com/api/download/models/251662 --content-disposition -P ./models/checkpoints/
 
 # perfectdeliberate
-wget ttps://civitai.com/api/download/models/253055 --content-disposition -P ./models/checkpoints/
+wget https://civitai.com/api/download/models/253055 --content-disposition -P ./models/checkpoints/
 
 # ipadapters
 wget https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus_sd15.safetensors -P ./models/ipadapter/

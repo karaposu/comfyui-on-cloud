@@ -22,3 +22,7 @@ git clone https://github.com/Gourieff/comfyui-reactor-node custom_nodes/comfyui-
 python custom_nodes/comfyui-reactor-node/install.py
 wget -P ~/models/facerestore_models https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/codeformer.pth
 wget -P ~/models/facerestore_models https://github.com/TencentARC/GFPGAN/releases/download/v1.3.4/GFPGANv1.4.pth
+
+# WAS extra nodes
+git clone https://github.com/WASasquatch/WAS_Extras custom_nodes/WAS_Extras
+python custom_nodes/comfyui-reactor-node/install.py
