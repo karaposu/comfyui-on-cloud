@@ -2,6 +2,8 @@
 
 mkdir -p ./models/clip/
 mkdir -p ./models/ipadapter/
+mkdir -p ./models/upscale_models/
+
 
 #sd_xl and refiner
 wget -c https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors -P ./models/checkpoints/
@@ -26,9 +28,8 @@ wget https://huggingface.co/akshitapps/TurboVisionXL/resolve/main/turbovisionxlS
 # Absolute Reality 1.8.1
 wget https://huggingface.co/digiplay/AbsoluteReality_v1.8.1/resolve/main/absolutereality_v181.safetensors -P ./models/checkpoints/
 
-
 # Absolute Reality 1.8.1.INPAINTING
-wget https://civitai.com/api/download/models/134084 --content-disposition -P ./models/checkpoints/
+#wget https://civitai.com/api/download/models/134084 --content-disposition -P ./models/checkpoints/
 
 # dreamshaper 8
 wget https://huggingface.co/autismanon/modeldump/resolve/main/dreamshaper_8.safetensors -P ./models/checkpoints/
@@ -37,17 +38,16 @@ wget https://huggingface.co/autismanon/modeldump/resolve/main/dreamshaper_8.safe
 wget https://civitai.com/api/download/models/251662 --content-disposition -P ./models/checkpoints/
 
 # perfectdeliberate
-wget https://civitai.com/api/download/models/253055 --content-disposition -P ./models/checkpoints/
+#wget https://civitai.com/api/download/models/253055 --content-disposition -P ./models/checkpoints/
 
 #epicrealism naturalSin
-wget https://huggingface.co/misri/epicrealism_naturalSin/resolve/main/epicrealism_naturalSin.safetensors -P ./models/checkpoints/
+#wget https://huggingface.co/misri/epicrealism_naturalSin/resolve/main/epicrealism_naturalSin.safetensors -P ./models/checkpoints/
 
 # ipadapters
 wget https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus_sd15.safetensors -P ./models/ipadapter/
 wget https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus-face_sd15.safetensors -P ./models/ipadapter/
 wget https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter_sd15.safetensors -P ./models/ipadapter/
 wget https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-full-face_sd15.safetensors -P ./models/ipadapter/
-
 wget https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_encoder/model.safetensors -P ./models/clip/
 
 # ControlNets
@@ -83,6 +83,8 @@ wget https://huggingface.co/comfyanonymous/clip_vision_g/resolve/main/clip_visio
 # wget https://huggingface.co/laion/CLIP-ViT-H-14-laion2B-s32B-b79K/resolve/main/model.safetensors -P ./models/clip/
 wget -O ./models/clip/CLIP-ViT-H-14.safetensors https://huggingface.co/laion/CLIP-ViT-H-14-laion2B-s32B-b79K/resolve/main/model.safetensors
 
+# upscaler
+wget https://huggingface.co/uwg/upscaler/resolve/main/ESRGAN/4x_NickelbackFS_72000_G.pth ./models/upscale_models/
 
 # segment anything
 ## GroundingDINO_SwinT_OGC
