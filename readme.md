@@ -29,8 +29,9 @@ Normally, a full month's usage of a T4 GPU with 6 VCPU cores, 16 GB RAM, and 100
     git clone https://github.com/karaposu/comfyui-on-cloud
     chmod +x ./comfyui-on-cloud/src/install.sh
     chmod +x ./comfyui-on-cloud/src/virgin_vm.sh
-    source ~/.bashrc
-    ./comfyui-on-cloud/src/virgin_vm.sh # run this only for new VM. This will install miniconda, cuda 11.8, torch.   
+  
+    ./comfyui-on-cloud/src/virgin_vm.sh # run this only for new VM. This will install miniconda, cuda 11.8, torch.  
+    source ~/.bashrc 
     ./comfyui-on-cloud/src/install.sh
     ```
 
