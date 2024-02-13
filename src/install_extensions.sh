@@ -4,6 +4,8 @@
 
 #COMFY MANAGER
 
+
+
 git clone https://github.com/ltdrdata/ComfyUI-Manager.git custom_nodes/ComfyUI-Manager
 pip install -r custom_nodes/ComfyUI-Manager/requirements.txt
 
@@ -26,3 +28,10 @@ wget -P ~/models/facerestore_models https://github.com/TencentARC/GFPGAN/release
 # WAS extra nodes
 git clone https://github.com/WASasquatch/WAS_Extras custom_nodes/WAS_Extras
 python custom_nodes/comfyui-reactor-node/install.py
+
+
+
+mkdir -p ./models/facerestore_models/
+git clone https://github.com/mav-rik/facerestore_cf custom_nodes/facerestore_cf
+wget https://github.com/TencentARC/GFPGAN/releases/download/v1.3.4/GFPGANv1.4.pth -P ./models/facerestore_models/
+wget https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/codeformer.pth -P ./models/facerestore_models/

@@ -19,8 +19,17 @@ Normally, a full month's usage of a T4 GPU with 6 VCPU cores, 16 GB RAM, and 100
 
 ---
 
+# Table of contents
+1. [How to Install?](#installation )
+2. [How to Use?](##usage)
+3. [How can I get my images?](#get_images)
+4. [Explanation of Files](#explanation_of_files)
+5. [Instruction details](#instruction_details)
+6. [Troubleshooting](#troubleshooting)
 
-## How to Install? (Takes only 15 mins!)
+
+
+## How to Install? (Takes only 15 mins!) <a name="installation"></a>
 
 1. Create a GCP compute engine instance(VM) and Install the google CLI on your local machine(details below).
 2. Log in to your VM and execute the following commands:
@@ -37,7 +46,9 @@ Normally, a full month's usage of a T4 GPU with 6 VCPU cores, 16 GB RAM, and 100
 
     This will set up comfyUI, install popular extensions and model checkpoints, and include an automation script that automatically starts the comfyvm server whenever the VM is booted.
 
-## How to Use 
+
+## How to Use?<a name="usage"></a>
+
 
 1. To start comfyUI server, open your terminal in your local machine and run the command below.
 
@@ -55,7 +66,7 @@ Normally, a full month's usage of a T4 GPU with 6 VCPU cores, 16 GB RAM, and 100
     gcloud compute instances stop comfyvm
     ```
 ---
-##  How can I get my images  
+##  How can I get my images<a name="get_images"></a>  
 ### Get them through ComfyUI 
 You can right click on generated image and click "save image". This will download it to your local
 if you wanna download past generated images you can click view history and load past image and then do "save image"
@@ -68,7 +79,7 @@ This will download the images into your local.
 
 
 
-## Explanation of Files for manual usage and debugging
+## Explanation of Files for manual usage and debugging <a name="explanation_of_files"></a>
 
 Feel free to inspect all files or ask for clarification to ensure safety and suggest any improvements.
 
@@ -78,7 +89,7 @@ Feel free to inspect all files or ask for clarification to ensure safety and sug
 - **Extensions Installer:** `install_extension.sh`
 - **We are also dynamically creating `run_the_server.sh`** file and adding it to the systemd services to ensure comfyUI starts on boot: `/etc/systemd/system/comfyui.service`
 
-## Detailed Tutorial
+## Detailed Tutorial   <a name="instructions_details"></a>
 
 ### 1. Creating a Linux VM with GPU Support and Authenticating Your Local Machine
 
@@ -146,7 +157,7 @@ Feel free to inspect all files or ask for clarification to ensure safety and sug
 
 
  
-##  TroubleShooting 
+##  TroubleShooting  <a name="troubleshooting"></a>
 ### If Installation finished but server doesnt start
 1. Try to login to the VM using  ```gcloud compute ssh comfyvm```. If you cant login, run 
 ```gcloud compute instances stop comfyvm``` and wait couple of minutes. And then run 
