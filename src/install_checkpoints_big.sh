@@ -43,6 +43,13 @@ wget https://civitai.com/api/download/models/251662 --content-disposition -P ./m
 # perfectdeliberate
 wget https://civitai.com/api/download/models/253055 --content-disposition -P ./models/checkpoints/
 
+#CyberRealistic 4.1
+wget https://civitai.com/api/download/models/256915 --content-disposition -P ./models/checkpoints/
+
+#CyberRealistic 4.1 inpainting
+wget https://civitai.com/api/download/models/256955 --content-disposition -P ./models/checkpoints/
+
+
 
 
 #epicrealism naturalSin
@@ -87,6 +94,7 @@ wget https://huggingface.co/thibaud/controlnet-openpose-sdxl-1.0/resolve/main/Op
 #vae
 wget https://huggingface.co/stabilityai/sd-vae-ft-ema-original/resolve/main/vae-ft-ema-560000-ema-pruned.ckpt -P ./models/vae/
 wget -O ./models/controlnet/vae_sdxl-1.0-inpainting-0.1.safetensors https://huggingface.co/diffusers/stable-diffusion-xl-1.0-inpainting-0.1/resolve/main/vae/diffusion_pytorch_model.safetensors
+wget https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors -P ./models/vae/
 
  # clip
 
@@ -104,6 +112,9 @@ wget -O  ./models/clip_vision/CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors   http
 
 wget https://huggingface.co/uwg/upscaler/resolve/main/ESRGAN/4x_NickelbackFS_72000_G.pth ./models/upscale_models/
 wget https://civitai.com/api/download/models/125843 --content-disposition -P ./models/upscale_models/
+
+
+
 
 
 # segment anything

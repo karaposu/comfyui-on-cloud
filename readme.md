@@ -68,7 +68,7 @@ Normally, a full month's usage of a T4 GPU with 6 VCPU cores, 16 GB RAM, and 100
 ---
 ##  How can I get my images<a name="get_images"></a>  
 ### Get them through ComfyUI 
-You can right click on generated image and click "save image". This will download it to your local
+You can right click on generated image and click "save image". This will download it to your local.
 if you wanna download past generated images you can click view history and load past image and then do "save image"
 ### Bulk download them to your local with gcloud scp
 1. Find out the full path of your ComfyUI output folder. Mine is `/home/ns/ComfyUI/output`.
