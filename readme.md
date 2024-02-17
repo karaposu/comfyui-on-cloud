@@ -167,7 +167,9 @@ Feel free to inspect all files or ask for clarification to ensure safety and sug
 .After this ```cd``` to ComfyUI directory and run 
 ```python main.py --listen```. Check the terminal output and make sure comfyui starts without problem. 
 
-3. If there are no problems when running the comfyui manually then the problem is about firewall permissions. Go and check firewall rule for port8188 and make sure in this firewall rule setting page you see comfyvm. If not then you must edit comfyvm and add port8188 tag in network settings section. 
+3. If there are no problems when running the comfyui manually then lets check why automatic startup fails. Inside your server type this 
+``journalctl -u comfyui.service`` and check if it shows any errors. 
+4. if there are no errors encountered for above steps, then the problem is about firewall permissions. Go and check firewall rule for port8188 and make sure in this firewall rule setting page you see comfyvm. If not then you must edit comfyvm and add port8188 tag in network settings section. 
 
 
 ### if comfyvm throws error when running through "python main.py --listen"
