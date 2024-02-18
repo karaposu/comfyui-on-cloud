@@ -103,6 +103,8 @@ Feel free to inspect all files or ask for clarification to ensure safety and sug
     wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-461.0.0-darwin-arm.tar.gz
     tar -xzvf google-cloud-cli-461.0.0-darwin-arm.tar.gz
     ./google-cloud-sdk/install.sh
+    # for windows simply download the gcloud from the link below and run it
+    # https://cloud.google.com/sdk/docs/install#windows
     ```
 
     If there are issues with the `gcloud` command, add the following to your `~/.bash_profile`, adjusting the paths as necessary:
@@ -123,6 +125,9 @@ Feel free to inspect all files or ask for clarification to ensure safety and sug
 
     ```bash
     ssh-keygen -t rsa -b 2048 -C "comfy_vm_key" -f ~/.ssh/comfy_vm_key
+    # for windows, run the below commands instead:
+    # mkdir "$HOME\.ssh"
+    # ssh-keygen -t rsa -b 2048 -C "comfy_vm_key" -f "$HOME\.ssh\comfy_vm_key"
     ```
      
     This creates `.ssh/comfy_vm_key.pub` and `.ssh/comfy_vm_key` files.
