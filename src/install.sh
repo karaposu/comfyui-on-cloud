@@ -66,7 +66,7 @@ echo "# Source the bashrc file" >> run_the_server.sh
 echo "source \$BASHRC_PATH" >> run_the_server.sh
 echo "" >> run_the_server.sh
 echo "# Start ComfyUI using the defined paths" >> run_the_server.sh
-echo "if ! sudo -u \$USER_NAME \$PYTHON_PATH \$COMFYUI_RUNNER_PATH --listen; then" >> run_the_server.sh
+echo "if ! sudo -u $USER_NAME \$PYTHON_PATH \$COMFYUI_RUNNER_PATH --listen; then" >> run_the_server.sh
 echo "    echo \"Error: Failed to start ComfyUI\" >&2" >> run_the_server.sh
 echo "fi" >> run_the_server.sh
 
