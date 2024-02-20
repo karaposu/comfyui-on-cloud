@@ -168,8 +168,7 @@ Feel free to inspect all files or ask for clarification to ensure safety and sug
 ```gcloud compute instances stop comfyvm``` and wait couple of minutes. And then run 
 ```gcloud compute instances start comfyvm``` and again wait couple of minutes. ANd then try to login again. 
 
-2. If there is no problem with logining your VM, then run ```systemctl stop comfyui.service``` to stop comfyui.service
-.After this ```cd``` to ComfyUI directory and run 
+2. If there is no problem with logining your VM, then run ```systemctl stop comfyui.service``` to stop comfyui.service. After this ```cd``` to ComfyUI directory and run 
 ```python main.py --listen```. Check the terminal output and make sure comfyui starts without problem. 
 
 3. If there are no problems when running the comfyui manually then lets check why automatic startup fails. Inside your server type this 

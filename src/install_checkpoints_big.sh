@@ -49,7 +49,8 @@ wget https://civitai.com/api/download/models/256915 --content-disposition -P ./m
 #CyberRealistic 4.1 inpainting
 wget https://civitai.com/api/download/models/256955 --content-disposition -P ./models/checkpoints/
 
-
+# epiCPhotoGasm-X photoreal
+wget https://civitai.com/api/download/models/132632 --content-disposition -P ./models/checkpoints/
 
 
 #epicrealism naturalSin
