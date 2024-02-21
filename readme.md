@@ -78,6 +78,11 @@ if you wanna download past generated images you can click view history and load 
 This will download the images into your local. 
 
 
+##  How can I download models <a name="get_images"></a>  
+- you can use ComfyUI Nanager to download them. Just open the Manager and click ```install models```
+- you can find any model you want on CivitAI and then once you are in the model page check your link and find the model id number there 
+links looks like this ```https://civitai.com/models/139562/realvisxl-v40``` here ```139562``` is the model id we need. modify the code line below with modelid number you want 
+```wget https://civitai.com/api/download/models/134084 --content-disposition -P ./models/checkpoints/```  Now all you need to do is login to your server and then do cd into ComfyUI folder (cd ComfyUI) and paste this line. Once installation finished you can use reboot your server and you can use the model. 
 
 ## Explanation of Files for manual usage and debugging <a name="explanation_of_files"></a>
 
