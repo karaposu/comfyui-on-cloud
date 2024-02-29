@@ -83,6 +83,7 @@ This will download the images into your local.
 - you can find any model you want on CivitAI and then once you are in the model page check your link and find the model id number there 
 links looks like this ```https://civitai.com/models/139562/realvisxl-v40``` here ```139562``` is the model id we need. modify the code line below with modelid number you want 
 ```wget https://civitai.com/api/download/models/134084 --content-disposition -P ./models/checkpoints/```  Now all you need to do is login to your server and then do cd into ComfyUI folder (cd ComfyUI) and paste this line. Once installation finished you can use reboot your server and you can use the model. 
+- https://education.civitai.com/civitais-guide-to-downloading-via-api/
 
 ## Explanation of Files for manual usage and debugging <a name="explanation_of_files"></a>
 
@@ -143,6 +144,8 @@ Feel free to inspect all files or ask for clarification to ensure safety and sug
     cd ~/.ssh
     gcloud compute os-login ssh-keys add --key-file=comfy_vm_key.pub
     gcloud compute ssh comfyvm --zone europe-central2-b
+    #  if you got error and try running this line  "gcloud compute config-ssh "   and then run "gcloud compute ssh comfyvm"
+    #  if this doesnt work too, run "gcloud compute config-ssh --remove" and "rm ~/.ssh/authorized_keys" and run "gcloud init" and try to connect again
     ```
 ### 2.Setting up ComfyUI Server
 
@@ -156,11 +159,13 @@ Feel free to inspect all files or ask for clarification to ensure safety and sug
 2. Clone the repo for ComfyUI installation scripts and execute them:
 
     ```bash
-    git clone https://github.com/karaposu/ComfyUI-on-VM
-    chmod +x ./ComfyUI-on-VM/src/virgin_vm.sh
-    chmod +x ./ComfyUI-on-VM/src/install.sh
-    ./ComfyUI-on-VM/src/virgin_vm.sh # 
-    ./ComfyUI-on-VM/src/install.sh
+    git clone https://github.com/karaposu/comfyui-on-cloud
+    chmod +x ./comfyui-on-cloud/src/install.sh
+    chmod +x ./comfyui-on-cloud/src/virgin_vm.sh
+  
+    ./comfyui-on-cloud/src/virgin_vm.sh # run this only for new VM. This will install miniconda, cuda 11.8, torch.  
+    source ~/.bashrc 
+    ./comfyui-on-cloud/src/install.sh
     ```
 
     This process will automatically install a startup runner for the server and start the server. You can verify the installation by accessing `[external-ip-of-your-vm]:8188` in your browser to check if everything is working correctly.
