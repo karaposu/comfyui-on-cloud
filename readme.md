@@ -23,15 +23,16 @@ Normally, a full month's usage of a T4 GPU with 6 VCPU cores, 16 GB RAM, and 100
 1. [How to Install?](#installation )
 2. [How to Use?](##usage)
 3. [How can I get my images?](#get_images)
-4. [Explanation of Files](#explanation_of_files)
-5. [Instruction details](#instruction_details)
-6. [Troubleshooting](#troubleshooting)
+4. [How can download new models?](#new_models)
+5. [Explanation of Files](#explanation_of_files)
+6. [Instruction details](#instruction_details)
+7. [Troubleshooting](#troubleshooting)
 
 
 
 ## How to Install? (Takes only 15 mins!) <a name="installation"></a>
 
-1. Create a GCP compute engine instance(VM) and Install the google CLI on your local machine(details below).
+1. Create a GCP compute engine instance(VM) and Install the google CLI on your local machine(***details below***).
 2. Log in to your VM and execute the following commands:
 
     ```bash
@@ -66,7 +67,7 @@ Normally, a full month's usage of a T4 GPU with 6 VCPU cores, 16 GB RAM, and 100
     gcloud compute instances stop comfyvm
     ```
 ---
-##  How can I get my images<a name="get_images"></a>  
+##  How can I get my images?<a name="get_images"></a>  
 ### Get them through ComfyUI 
 You can right click on generated image and click "save image". This will download it to your local.
 if you wanna download past generated images you can click view history and load past image and then do "save image"
@@ -78,7 +79,7 @@ if you wanna download past generated images you can click view history and load 
 This will download the images into your local. 
 
 
-##  How can I download models <a name="get_images"></a>  
+##  How can I download new models? <a name="new_models"></a>  
 - Option 1: You can use ComfyUI Nanager to download them. Just open the Manager and click
 ```install models```
 - Option 2: Find a model you like in CivitAI. When you are in the model page, check your link and find the model id number. 
@@ -92,8 +93,9 @@ Civitai links looks like this:
 
    Now, all you need to do is login to your server and then enter your ComfyUI folder with ```cd ComfyUI``` and paste the line above. 
    Once installation finished you can use reboot your server and you can use the model. 
-   And some models requires login. And to download them, follow insturctions in thie link 
-- https://education.civitai.com/civitais-guide-to-downloading-via-api/
+   And some models requires login. And to download them, follow instructions in this link :
+
+   https://education.civitai.com/civitais-guide-to-downloading-via-api/
 
 ## Explanation of Files for manual usage and debugging <a name="explanation_of_files"></a>
 
