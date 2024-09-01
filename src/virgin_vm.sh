@@ -31,9 +31,12 @@ python test_cuda.py
 
 
 ## run these lines in the vm to make sure port 8188 is open for external access
-#sudo ufw allow 8188/tcp
-#sudo ufw reload
+
+# sudo apt -y install firewalld
 #sudo firewall-cmd --zone=public --add-port=8188/tcp --permanent
 #sudo firewall-cmd --reload
+
+#sudo ufw allow 8188/tcp
+#sudo ufw reload
 #sudo apt-get install iptables
 #sudo iptables -A INPUT -p tcp --dport 8188 -j ACCEPT

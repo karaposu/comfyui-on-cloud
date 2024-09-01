@@ -39,7 +39,7 @@ wget https://huggingface.co/autismanon/modeldump/resolve/main/dreamshaper_8.safe
 wget https://civitai.com/api/download/models/251662 --content-disposition -P ./models/checkpoints/
 
 # epiCPhotoGasm-X photoreal
-wget https://civitai.com/api/download/models/132632 --content-disposition -P ./models/checkpoints/
+#wget https://civitai.com/api/download/models/132632 --content-disposition -P ./models/checkpoints/
 
 # perfectdeliberate
 #wget https://civitai.com/api/download/models/253055 --content-disposition -P ./models/checkpoints/

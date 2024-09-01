@@ -1,5 +1,10 @@
 #!/bin/bash
 
+
+
+# curl fsSL https://github.com/karaposu/comfyui-on-cloud/blob/main/src/install.sh | sh
+
+
 USER_NAME=$(whoami)
 USER_HOME=$(eval echo ~$USER_NAME)
 
@@ -20,37 +25,40 @@ COMFYUI_RUNNER_PATH="${comfy_ui_dir}/main.py"
 COMFYUI_PATH=$comfy_ui_dir
 
 
-cp comfyui-on-cloud/src/install_comfyui.sh .
-
-chmod +x install_comfyui.sh
-./install_comfyui.sh
-
+curl fsSL https://github.com/karaposu/comfyui-on-cloud/blob/main/src/install_comfyui.sh | sh
 echo " "
 echo " ---------------- comfyui installed "
 echo " "
 
-cp comfyui-on-cloud/src/install_extensions.sh ComfyUI
-cp comfyui-on-cloud/src/install_checkpoints.sh ComfyUI
-
-echo " "
-echo " ---------------- automation scripts copied to comfyui directory "
-echo " "
 
 cd ComfyUI
+curl fsSL https://github.com/karaposu/comfyui-on-cloud/blob/main/src/install_extensions.sh | sh
 
-chmod +x install_extensions.sh
-chmod +x install_checkpoints.sh
-./install_extensions.sh
+curl fsSL https://github.com/karaposu/comfyui-on-cloud/blob/main/src/install_checkpoints.sh | sh
 
-echo " "
-echo " ---------------- extensions installed "
-echo " "
-./install_checkpoints.sh
-#./install_checkpoints_big.sh
 
-echo " "
-echo " ---------------- checkpoints installed "
-echo " "
+#cp comfyui-on-cloud/src/install_extensions.sh ComfyUI
+#cp comfyui-on-cloud/src/install_checkpoints.sh ComfyUI
+
+#echo " "
+#echo " ---------------- automation scripts copied to comfyui directory "
+#echo " "
+
+#cd ComfyUI
+
+#chmod +x install_extensions.sh
+#chmod +x install_checkpoints.sh
+#./install_extensions.sh
+
+#echo " "
+#echo " ---------------- extensions installed "
+#echo " "
+#./install_checkpoints.sh
+##./install_checkpoints_big.sh
+#
+#echo " "
+#echo " ---------------- checkpoints installed "
+#echo " "
 
 
 # Dynamically creating run_the_server.sh
