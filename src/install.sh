@@ -1,8 +1,7 @@
 #!/bin/bash
 
 #to install doing this will be enough
-
-# curl fsSL https://github.com/karaposu/comfyui-on-cloud/blob/develop/src/install.sh | sh
+# curl -fsSL https://github.com/karaposu/comfyui-on-cloud/blob/develop/src/install.sh | sh
 
 
 USER_NAME=$(whoami)
@@ -25,16 +24,16 @@ COMFYUI_RUNNER_PATH="${comfy_ui_dir}/main.py"
 COMFYUI_PATH=$comfy_ui_dir
 
 
-curl fsSL https://github.com/karaposu/comfyui-on-cloud/blob/develop/src/install_comfyui.sh | sh
+curl -fsSL https://github.com/karaposu/comfyui-on-cloud/blob/develop/src/install_comfyui.sh | sh
 echo " "
 echo " ---------------- comfyui installed "
 echo " "
 
 
 cd ComfyUI
-curl fsSL https://github.com/karaposu/comfyui-on-cloud/blob/develop/src/install_extensions.sh | sh
+curl -fsSL https://github.com/karaposu/comfyui-on-cloud/blob/develop/src/install_extensions.sh | sh
 
-curl fsSL https://github.com/karaposu/comfyui-on-cloud/blob/develop/src/install_checkpoints.sh | sh
+curl -fsSL https://github.com/karaposu/comfyui-on-cloud/blob/develop/src/install_checkpoints.sh | sh
 
 
 #cp comfyui-on-cloud/src/install_extensions.sh ComfyUI
