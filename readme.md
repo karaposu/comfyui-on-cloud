@@ -165,7 +165,7 @@ Feel free to inspect all files or ask for clarification to ensure safety and sug
 
     ```bash
     gcloud compute ssh comfyvm --zone europe-central2-b
-    conda activate base
+    
     ```
 
 2. Clone the repo for ComfyUI installation scripts and execute them:
