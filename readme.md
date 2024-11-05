@@ -113,9 +113,10 @@ Feel free to inspect all files or ask for clarification to ensure safety and sug
 
 1. **Create a Google Cloud Platform account** and activate the compute engine. 
 2. **Upgrading to a paid account** (Search "billing accounts")
-3. **Increase GPU quota** from 0 to 1 via Quotas & System Limits (search GPUs (all regions) inside the Quotas & System Limits )
-4. **Create an Ubuntu 20.04 VM** with T4 GPU and add a TCP firewall rule for port 8188. (name your instance comfyvm, choose zone as europe-central2-b and make sure add your firewall port8188 tag in the network section  )
-5. **Open terminal in your local machine and Install the gcloud CLI**:
+3. **Enable Compute Engine API** Search for Compute Engine and press enable on main screen if it's not enabled. (You won't be able to increase GPU quota until you do) 
+4. **Increase GPU quota** from 0 to 1 via Quotas & System Limits (search GPUs (all regions) inside the Quotas & System Limits )
+5. **Create an Ubuntu 20.04 VM** with T4 GPU and add a TCP firewall rule for port 8188. (name your instance comfyvm, choose zone as europe-central2-b and make sure add your firewall port8188 tag in the network section  )
+6. **Open terminal in your local machine and Install the gcloud CLI**:
 
     ```bash
     wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-461.0.0-darwin-arm.tar.gz
@@ -132,14 +133,14 @@ Feel free to inspect all files or ask for clarification to ensure safety and sug
     if [ -f '/Users/your_username/projects/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/your_username/projects/google-cloud-sdk/completion.bash.inc'; fi
     ```
 
-6. **Authenticate using gcloud** on your local machine:
+7. **Authenticate using gcloud** on your local machine:
 
     ```bash
    gcloud auth login
     gcloud init
     ```
 
-7. **Generate new SSH key pairs** on your local machine:
+8. **Generate new SSH key pairs** on your local machine:
 
     ```bash
     ssh-keygen -t rsa -b 2048 -C "comfy_vm_key" -f ~/.ssh/comfy_vm_key
@@ -150,7 +151,7 @@ Feel free to inspect all files or ask for clarification to ensure safety and sug
      
     This creates `.ssh/comfy_vm_key.pub` and `.ssh/comfy_vm_key` files.
 
-8. **Authenticate the VM with your SSH key pairs** and log in from your local machine to the VM:
+9. **Authenticate the VM with your SSH key pairs** and log in from your local machine to the VM:
 
     ```bash
     cd ~/.ssh
